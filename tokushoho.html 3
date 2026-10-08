@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>特定商取引法に基づく表記 — みえらっく</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f2f2f7;
+    --card: #ffffff;
+    --text: #111114;
+    --muted: rgba(60,60,67,0.62);
+    --line: rgba(60,60,67,0.16);
+    --accent: #1f6fc5;
+    --accent-soft: rgba(31,111,197,0.10);
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --bg: #000000;
+      --card: #1c1c1e;
+      --text: #f5f5f7;
+      --muted: rgba(235,235,245,0.62);
+      --line: rgba(235,235,245,0.18);
+      --accent: #6fa8e6;
+      --accent-soft: rgba(75,180,240,0.14);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #000000;
+    --card: #1c1c1e;
+    --text: #f5f5f7;
+    --muted: rgba(235,235,245,0.62);
+    --line: rgba(235,235,245,0.18);
+    --accent: #6fa8e6;
+    --accent-soft: rgba(75,180,240,0.14);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Segoe UI", system-ui, sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 80px; }
+
+  header {
+    padding: 56px 0 36px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 36px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 30px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.5px; }
+  .sub { color: var(--muted); font-size: 15px; margin: 0; }
+
+  .lead {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin-bottom: 40px;
+  }
+  .lead p { margin: 0; font-size: 15px; }
+  .lead strong { color: var(--accent); }
+
+  section { margin-bottom: 38px; }
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+    letter-spacing: -0.2px;
+  }
+  p { font-size: 15px; margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { font-size: 15px; margin-bottom: 8px; }
+
+  .note {
+    font-size: 14px;
+    color: var(--muted);
+    background: var(--card);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 18px 0;
+  }
+
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 16px; font-size: 14px; }
+  th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; width: 38%; }
+
+  .fill { color: var(--accent); font-weight: 600; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer p { font-size: 13px; }
+
+  .en {
+    margin-top: 44px;
+    padding: 24px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+  }
+  .en h2 { font-size: 17px; }
+  .en p, .en li { font-size: 14px; }
+
+  @media (max-width: 480px) {
+    header { padding: 40px 0 28px; }
+    h1 { font-size: 25px; }
+    th { width: 42%; }
+  }
+
+  .fill { background: #fff3a8; color: #6b4e00; padding: 0 4px; border-radius: 4px; font-weight: 600; }
+  table.info { width: 100%; border-collapse: collapse; font-size: 14px; margin: 8px 0; }
+  table.info th, table.info td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.info th { color: var(--muted); font-weight: 600; width: 34%; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="badge">みえらっく - 家計簿</span>
+    <h1>特定商取引法に基づく表記</h1>
+    <p class="sub">最終更新日：2026年9月30日</p>
+  </header>
+
+  <section>
+    <table class="info">
+      <tr><th>販売事業者</th><td>HIDEO SUZUKI（個人）</td></tr>
+      <tr><th>運営責任者</th><td>HIDEO SUZUKI</td></tr>
+      <tr><th>所在地</th><td>〒107-0061 東京都港区北青山1-3-3 三橋ビル 3階</td></tr>
+      <tr><th>電話番号</th><td>070-9048-2824<br><span style='color: var(--muted); font-size: 13px'>お問い合わせは、なるべくメールでお願いします。</span></td></tr>
+      <tr><th>メールアドレス</th><td><a href="mailto:philia.neo.aag@gmail.com" style="color: var(--accent)">philia.neo.aag@gmail.com</a></td></tr>
+      <tr><th>販売するもの</th><td>iPhone アプリ「みえらっく - 家計簿」の App内課金「記録を無制限に」</td></tr>
+      <tr><th>販売価格</th><td>600円（税込）<br><span style='color: var(--muted); font-size: 13px'>App Store の購入画面に表示される価格が優先されます。</span></td></tr>
+      <tr><th>商品代金以外の必要料金</th><td>アプリのダウンロードや利用にかかるインターネットの通信料（お客さまのご負担）</td></tr>
+      <tr><th>支払方法</th><td>App Store の支払方法（Apple が提供する決済）</td></tr>
+      <tr><th>支払時期</th><td>App Store での購入手続きが完了した時点</td></tr>
+      <tr><th>引渡時期</th><td>購入手続きの完了後、すぐにご利用いただけます</td></tr>
+      <tr><th>返品・キャンセル</th><td>デジタルコンテンツの性質上、購入後の返品・キャンセルはお受けしておりません。返金については Apple の返金に関する規定に従います。</td></tr>
+      <tr><th>動作環境</th><td>iOS 26.0 以降を搭載した iPhone</td></tr>
+      <tr><th>購入の復元</th><td>同じ Apple ID であれば、アプリの「設定 → アプリ内購入 → 購入を復元」から無料で復元できます</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <p><a href="./" style="color: var(--accent)">プライバシーポリシー</a>　／　<a href="./support.html" style="color: var(--accent)">サポート</a></p>
+  </section>
+
+  <footer>
+    <p>© 2026 HIDEO SUZUKI</p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー — みえらっく</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f2f2f7;
+    --card: #ffffff;
+    --text: #111114;
+    --muted: rgba(60,60,67,0.62);
+    --line: rgba(60,60,67,0.16);
+    --accent: #1f6fc5;
+    --accent-soft: rgba(31,111,197,0.10);
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --bg: #000000;
+      --card: #1c1c1e;
+      --text: #f5f5f7;
+      --muted: rgba(235,235,245,0.62);
+      --line: rgba(235,235,245,0.18);
+      --accent: #6fa8e6;
+      --accent-soft: rgba(75,180,240,0.14);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #000000;
+    --card: #1c1c1e;
+    --text: #f5f5f7;
+    --muted: rgba(235,235,245,0.62);
+    --line: rgba(235,235,245,0.18);
+    --accent: #6fa8e6;
+    --accent-soft: rgba(75,180,240,0.14);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Segoe UI", system-ui, sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 80px; }
+
+  header {
+    padding: 56px 0 36px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 36px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 30px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.5px; }
+  .sub { color: var(--muted); font-size: 15px; margin: 0; }
+
+  .lead {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin-bottom: 40px;
+  }
+  .lead p { margin: 0; font-size: 15px; }
+  .lead strong { color: var(--accent); }
+
+  section { margin-bottom: 38px; }
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+    letter-spacing: -0.2px;
+  }
+  p { font-size: 15px; margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { font-size: 15px; margin-bottom: 8px; }
+
+  .note {
+    font-size: 14px;
+    color: var(--muted);
+    background: var(--card);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 18px 0;
+  }
+
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 16px; font-size: 14px; }
+  th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; width: 38%; }
+
+  .fill { color: var(--accent); font-weight: 600; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer p { font-size: 13px; }
+
+  .en {
+    margin-top: 44px;
+    padding: 24px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+  }
+  .en h2 { font-size: 17px; }
+  .en p, .en li { font-size: 14px; }
+
+  @media (max-width: 480px) {
+    header { padding: 40px 0 28px; }
+    h1 { font-size: 25px; }
+    th { width: 42%; }
+  }
+
+  .fill { background: #fff3a8; color: #6b4e00; padding: 0 4px; border-radius: 4px; font-weight: 600; }
+  table.info { width: 100%; border-collapse: collapse; font-size: 14px; margin: 8px 0; }
+  table.info th, table.info td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.info th { color: var(--muted); font-weight: 600; width: 34%; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="badge">みえらっく - 家計簿</span>
+    <h1>プライバシーポリシー</h1>
+    <p class="sub">制定日：2026年9月13日　最終更新日：2026年9月30日</p>
+  </header>
+
+  <div class="lead">
+    <p>「みえらっく - 家計簿」（以下「本アプリ」）は、入力された家計のデータをお使いの iPhone の中に保存し、開発者のサーバーへ送信しない設計の家計簿アプリです。本ポリシーは、本アプリにおける情報の取り扱いを説明するものです。</p>
+  </div>
+
+  <section>
+    <h2>1. 運営者</h2>
+    <table class="info">
+      <tr><th>運営者</th><td>HIDEO SUZUKI（個人）</td></tr>
+      <tr><th>所在地</th><td>〒107-0061 東京都港区北青山1-3-3 三橋ビル 3階</td></tr>
+      <tr><th>お問い合わせ</th><td><a href="mailto:philia.neo.aag@gmail.com" style="color: var(--accent)">philia.neo.aag@gmail.com</a></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>2. 開発者が取得する情報</h2>
+    <p>本アプリの開発者は、利用者の個人情報を<strong>取得しません</strong>。</p>
+    <ul>
+      <li>アカウントの登録やログインはありません。氏名・メールアドレス・電話番号などを入力する欄もありません</li>
+      <li>利用状況の分析ツール、広告、クラッシュ収集ツールなど、外部の事業者の仕組み（SDK）は組み込んでいません</li>
+      <li>位置情報、連絡先、端末の識別子などは取得しません</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. 端末内に保存される情報</h2>
+    <p>利用者が入力した次の情報は、お使いの iPhone の中にのみ保存されます。開発者を含む第三者が閲覧することはできません。</p>
+    <ul>
+      <li>支出の記録（金額、日時、カテゴリ、支払い方法、メモ）</li>
+      <li>カテゴリ、支払い方法、予算、節約目標、定期支出、各種設定</li>
+    </ul>
+    <p>これらは、本アプリとそのウィジェットで共有する端末内の領域（App Group）に保存され、ホーム画面のウィジェットの表示にも使われます。また、無料で記録できる件数の管理のため、これまでに追加した記録の件数（数値のみ）を端末内のキーチェーンに保存します。</p>
+  </section>
+
+  <section>
+    <h2>4. iCloud の利用</h2>
+    <p>本アプリは、次の2つの目的で、利用者ご自身の iCloud を利用します。保存先は利用者の iCloud アカウントであり、開発者はアクセスできません。iCloud での取り扱いは Apple のプライバシーポリシーに従います。</p>
+    <ul>
+      <li><strong>バックアップ（任意）</strong>：利用者が操作したとき、または利用者がオンにした自動バックアップによって、記録のコピーを iCloud Drive に保存します。バックアップは本アプリの設定画面、または「ファイル」アプリからいつでも削除できます</li>
+      <li><strong>記録件数の引き継ぎ</strong>：機種変更後も無料枠を正しく管理するため、追加した記録の件数（数値のみ）を iCloud に保存します。記録の内容は含みません</li>
+    </ul>
+    <p>本アプリは iCloud による自動同期は行いません。</p>
+  </section>
+
+  <section>
+    <h2>5. 写真・スクリーンショット</h2>
+    <p>決済画面のスクリーンショットなどから金額を読み取る機能があります。</p>
+    <ul>
+      <li>写真ライブラリへのアクセスは、利用者が画像を選んだときに、その画像だけを対象に行います</li>
+      <li>読み取りは Apple の文字認識機能（Vision）により<strong>端末内で</strong>行います</li>
+      <li>画像は保存せず、外部へ送信することもありません</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. メール・通知の文面</h2>
+    <p>利用者が iOS の「ショートカット」アプリで設定した場合に限り、カード会社などから届いたメールや通知の文面が本アプリに渡されます。</p>
+    <ul>
+      <li>文面は、金額・利用先・日時を読み取るためだけに<strong>端末内で</strong>処理します</li>
+      <li>文面そのものは保存せず、外部へ送信することもありません</li>
+      <li>本アプリがメールや通知を自ら読み取ることはありません</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. 通知</h2>
+    <p>週末・月末のふりかえりや支払日のお知らせは、端末内で作成するローカル通知です。プッシュ通知のサーバーは使用しておらず、通知のために情報を送信することはありません。通知は iPhone の設定からいつでも止められます。</p>
+  </section>
+
+  <section>
+    <h2>8. アプリ内課金</h2>
+    <p>アプリ内課金の決済は Apple（App Store）が行います。開発者が利用者の決済情報（カード番号など）を受け取ることはありません。本アプリは、購入済みかどうかの確認のためにのみ App Store と通信します。</p>
+  </section>
+
+  <section>
+    <h2>9. 広告・トラッキング</h2>
+    <p>本アプリは広告を表示せず、他社のアプリやウェブサイトをまたいだ利用者の追跡（トラッキング）も行いません。</p>
+  </section>
+
+  <section>
+    <h2>10. 第三者への提供・外部送信</h2>
+    <p>開発者は利用者の情報を取得しないため、第三者へ提供することもありません。本アプリが行う通信は、次の2つに限られます。</p>
+    <ul>
+      <li>アプリ内課金の処理のための App Store との通信</li>
+      <li>利用者が iCloud バックアップ・記録件数の引き継ぎを使う場合の、利用者自身の iCloud との通信</li>
+    </ul>
+    <p>利用者の端末から開発者や外部の事業者へ情報を送信する仕組みは組み込んでいません。</p>
+    <div class="note">機内モードのままでも、記録・集計・グラフ・通知・PDF 書き出しを含むすべての機能をご利用いただけます（iCloud バックアップのみ通信が必要です）。</div>
+  </section>
+
+  <section>
+    <h2>11. データの書き出しと削除</h2>
+    <ul>
+      <li>月ごとのレポートを PDF で書き出せます。保存先は利用者が選びます</li>
+      <li>記録は、本アプリの設定画面から今月分またはすべてを削除できます</li>
+      <li>本アプリを端末から削除すると、端末内に保存されていた記録も削除されます。iCloud バックアップを作成していた場合は、そこから復元できます</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>12. 安全管理</h2>
+    <p>記録は iOS の保護機能（データ保護・サンドボックス）のもとで端末内に保存されます。端末のパスコードや Face ID を設定することで、より安全にお使いいただけます。</p>
+  </section>
+
+  <section>
+    <h2>13. 子どものプライバシー</h2>
+    <p>本アプリは年齢を問わずご利用いただけます。開発者は、お子さまを含むすべての利用者の個人情報を取得しません。</p>
+  </section>
+
+  <section>
+    <h2>14. 本ポリシーの変更</h2>
+    <p>本ポリシーは、機能の追加や法令の変更に応じて改定することがあります。改定した場合は、このページの最終更新日を更新してお知らせします。</p>
+  </section>
+
+  <section>
+    <h2>15. お問い合わせ</h2>
+    <p>本ポリシーや本アプリについてのお問い合わせは、次の連絡先までお願いします。</p>
+    <p>運営者：HIDEO SUZUKI<br>所在地：〒107-0061 東京都港区北青山1-3-3 三橋ビル 3階<br>メール：<a href="mailto:philia.neo.aag@gmail.com" style="color: var(--accent)">philia.neo.aag@gmail.com</a></p>
+    <p><a href="./support.html" style="color: var(--accent)">サポートページ</a>　／　<a href="./tokushoho.html" style="color: var(--accent)">特定商取引法に基づく表記</a></p>
+  </section>
+
+  <section>
+    <h2>Privacy Policy (English Summary)</h2>
+    <ul>
+      <li>Mierack does not collect any personal data. No account is required, and no analytics, advertising, or tracking SDKs are included.</li>
+      <li>All expense data is stored only on your iPhone (shared with the app's widget via an App Group) and is never sent to the developer.</li>
+      <li>Optional iCloud backup and a record count (a number only) are stored in your own iCloud account. The developer cannot access them.</li>
+      <li>Screenshots and the text of emails or notifications passed via the Shortcuts app are processed on-device only and are neither stored nor transmitted.</li>
+      <li>Notifications are local. In-app purchases are processed by Apple.</li>
+      <li>Contact: HIDEO SUZUKI — philia.neo.aag@gmail.com</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2026 HIDEO SUZUKI</p>
+  </footer>
+
+</div>
+</body>
+</html>

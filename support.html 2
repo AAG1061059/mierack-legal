@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サポート — みえらっく</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f2f2f7;
+    --card: #ffffff;
+    --text: #111114;
+    --muted: rgba(60,60,67,0.62);
+    --line: rgba(60,60,67,0.16);
+    --accent: #1f6fc5;
+    --accent-soft: rgba(31,111,197,0.10);
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --bg: #000000;
+      --card: #1c1c1e;
+      --text: #f5f5f7;
+      --muted: rgba(235,235,245,0.62);
+      --line: rgba(235,235,245,0.18);
+      --accent: #6fa8e6;
+      --accent-soft: rgba(75,180,240,0.14);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #000000;
+    --card: #1c1c1e;
+    --text: #f5f5f7;
+    --muted: rgba(235,235,245,0.62);
+    --line: rgba(235,235,245,0.18);
+    --accent: #6fa8e6;
+    --accent-soft: rgba(75,180,240,0.14);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Segoe UI", system-ui, sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px 80px; }
+
+  header {
+    padding: 56px 0 36px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 36px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 30px; font-weight: 700; margin: 0 0 8px; letter-spacing: -0.5px; }
+  .sub { color: var(--muted); font-size: 15px; margin: 0; }
+
+  .lead {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin-bottom: 40px;
+  }
+  .lead p { margin: 0; font-size: 15px; }
+  .lead strong { color: var(--accent); }
+
+  section { margin-bottom: 38px; }
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+    letter-spacing: -0.2px;
+  }
+  p { font-size: 15px; margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { font-size: 15px; margin-bottom: 8px; }
+
+  .note {
+    font-size: 14px;
+    color: var(--muted);
+    background: var(--card);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 18px 0;
+  }
+
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 16px; font-size: 14px; }
+  th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; width: 38%; }
+
+  .fill { color: var(--accent); font-weight: 600; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer p { font-size: 13px; }
+
+  .en {
+    margin-top: 44px;
+    padding: 24px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+  }
+  .en h2 { font-size: 17px; }
+  .en p, .en li { font-size: 14px; }
+
+  @media (max-width: 480px) {
+    header { padding: 40px 0 28px; }
+    h1 { font-size: 25px; }
+    th { width: 42%; }
+  }
+
+  .fill { background: #fff3a8; color: #6b4e00; padding: 0 4px; border-radius: 4px; font-weight: 600; }
+  table.info { width: 100%; border-collapse: collapse; font-size: 14px; margin: 8px 0; }
+  table.info th, table.info td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.info th { color: var(--muted); font-weight: 600; width: 34%; }
+
+  .qa { background: var(--card); border-radius: 16px; padding: 16px 18px; margin: 12px 0; }
+  .qa h3 { font-size: 16px; margin: 0 0 6px; }
+  .qa p { margin: 4px 0; font-size: 15px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="badge">みえらっく - 家計簿</span>
+    <h1>サポート</h1>
+    <p class="sub">最終更新日：2026年9月30日</p>
+  </header>
+
+  <div class="lead">
+    <p>みえらっくは、支出をすぐ記録して使いすぎを防ぐための家計簿アプリです。記録はすべて iPhone の中に保存され、アカウント登録は不要です。</p>
+  </div>
+
+  <section>
+    <h2>主な機能</h2>
+    <ul>
+      <li>本日・週間・月間の支出と残高、1日の目安の表示</li>
+      <li>ウィジェット・コントロールセンターからのワンタップ記録</li>
+      <li>ショートカット連携（決済後の記録、メール・通知の文面からの記録）</li>
+      <li>スクリーンショットからの金額の読み取り</li>
+      <li>カレンダー、月別レポート、決済内訳、分析</li>
+      <li>定期支出の管理と支払日の通知、支払日の自動記録</li>
+      <li>節約目標と達成メダル</li>
+      <li>iCloud へのバックアップと復元、月別レポートの PDF 書き出し</li>
+      <li>ダークモード</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>よくある質問</h2>
+    <div class="qa">
+      <h3>料金はかかりますか？</h3>
+      <p>記録は累計30件まで無料でご利用いただけます。31件目からは、買い切り（¥600）で件数の上限がなくなります。月額・年額の課金や広告はありません。</p>
+    </div>
+    <div class="qa">
+      <h3>記録を削除すれば、無料で使い続けられますか？</h3>
+      <p>無料で記録できる件数は「これまでに追加した累計件数」で数えるため、記録を削除しても無料枠は戻りません。削除の前に確認画面でもお知らせしています。</p>
+    </div>
+    <div class="qa">
+      <h3>機種変更したら、購入は引き継げますか？</h3>
+      <p>同じ Apple ID であれば引き継げます。アプリの「設定 → アプリ内購入 → 購入を復元」をタップしてください。</p>
+    </div>
+    <div class="qa">
+      <h3>機種変更したら、記録は引き継げますか？</h3>
+      <p>iCloud バックアップで引き継げます。古い iPhone で「設定 → バックアップ → 今すぐバックアップ」を行い、新しい iPhone で同じ Apple ID にサインインしてから、「バックアップ」の一覧から復元してください。</p>
+    </div>
+    <div class="qa">
+      <h3>iCloud バックアップができません</h3>
+      <p>iPhone の「設定」→［ご自身の名前］→ iCloud で、サインインしていること、iCloud Drive がオンになっていることを確認してください。iCloud の空き容量が不足している場合も保存できません。iCloud を使わない場合は「ファイルに書き出す」で任意の場所に保存できます。</p>
+    </div>
+    <div class="qa">
+      <h3>通知が届きません</h3>
+      <p>「設定 → 通知 → 今すぐ試す」で、5秒後に試しの通知が届くか確認できます。届かない場合は、iPhone の「設定」→「みえらっく」→ 通知 で、通知が許可されているか確認してください。集中モード中は通知が表示されないことがあります。</p>
+    </div>
+    <div class="qa">
+      <h3>ウィジェットの金額が表示されない・アプリと違います</h3>
+      <p>ホーム画面のウィジェットを一度削除して置き直してください。アプリの「設定 → プライバシー」で「ウィジェットの読み取り」が「できています」と表示されていれば、アプリと同じデータを表示しています。</p>
+    </div>
+    <div class="qa">
+      <h3>決済のたびに自動で記録できますか？</h3>
+      <p>iPhone の「ショートカット」アプリと連携すると、カード決済のあとに金額を聞かれるだけで記録できます。カード会社のメールや通知の文面から金額を読み取って記録することもできます。設定方法はアプリの「設定 → 自動記録」をご覧ください。文面の読み取りは端末内で行い、保存も送信もしません。</p>
+    </div>
+    <div class="qa">
+      <h3>スクリーンショットから金額が読み取れません</h3>
+      <p>金額の部分が画面にはっきり写っているスクリーンショットをお使いください。読み取れなかった場合は、金額を手で入力して記録できます。</p>
+    </div>
+    <div class="qa">
+      <h3>アプリを削除するとどうなりますか？</h3>
+      <p>端末内の記録は削除されます。iCloud バックアップを作成していれば、入れ直したあとに復元できます。購入は「購入を復元」で戻せます。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>お問い合わせ</h2>
+    <p>ご不明な点や不具合のご報告は、次の連絡先までお願いします。お使いの iPhone の機種と iOS のバージョンを添えていただけると、スムーズにご案内できます。</p>
+    <p>運営者：HIDEO SUZUKI<br>メール：<a href="mailto:philia.neo.aag@gmail.com" style="color: var(--accent)">philia.neo.aag@gmail.com</a></p>
+    <p>返信まで数日いただく場合があります。</p>
+    <p><a href="./" style="color: var(--accent)">プライバシーポリシー</a>　／　<a href="./tokushoho.html" style="color: var(--accent)">特定商取引法に基づく表記</a></p>
+  </section>
+
+  <footer>
+    <p>© 2026 HIDEO SUZUKI</p>
+  </footer>
+
+</div>
+</body>
+</html>
